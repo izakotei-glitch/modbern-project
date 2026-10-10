@@ -1,0 +1,495 @@
+<<!<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Інформаційний туристичний гід по Берну — затишній столиці Швейцарії. Найвідоміші пам'ятки, ведмеді, фонтани та корисні факти.">
+    <title>Берн — затишна столиця Швейцарії: Туристичний гід</title>
+        <style>
+        /* --- Сброс базовых стилей и шрифты --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f0f4f8;
+            text-align: center;
+        }
+
+        /* --- ШАПКА --- */
+        header {
+            background: linear-gradient(135deg, #d52b1e 0%, #e67e22 50%, #16a085 100%);
+            color: #ffffff;
+            padding: 4rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-bottom: 4px solid #f1c40f;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        /* --- МЕНЮ --- */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        nav ul li a,
+        nav ul li a:link,
+        nav ul li a:visited {
+            color: #ffffff !important;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 0.7rem 1.6rem;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+
+        nav ul li:nth-child(1) a { background-color: #2980b9 !important; } 
+        nav ul li:nth-child(2) a { background-color: #27ae60 !important; }  
+        nav ul li:nth-child(3) a { background-color: #d35400 !important; } 
+        nav ul li:nth-child(4) a { background-color: #8e44ad !important; }
+
+        nav ul li a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            filter: brightness(1.2) !important;
+        }
+
+        /* --- Контейнер --- */
+        main {
+            max-width: 950px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- Карточки --- */
+        article, section, aside {
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            margin-bottom: 3rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 5px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        article:hover, section:hover, aside:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        #about { border-top-color: #d52b1e; }
+        #about h2 { color: #d52b1e; border-bottom-color: #fadbd8; }
+
+        #places { border-top-color: #27ae60; }
+        #places h2 { color: #27ae60; border-bottom-color: #d4efdf; }
+
+        #stats { border-top-color: #2980b9; }
+        #stats h2 { color: #2980b9; border-bottom-color: #d6eaf8; }
+
+        #media { border-top-color: #8e44ad; }
+        #media h2 { color: #8e44ad; border-bottom-color: #ebdef0; }
+
+        h2 {
+            font-size: 1.9rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f0f0f0;
+            width: 100%;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            max-width: 750px;
+            color: #52606d;
+        }
+
+        hr {
+            display: none;
+        }
+
+        mark {
+            background-color: #f1c40f;
+            color: #000000;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        blockquote {
+            background-color: #f8fafc;
+            border-left: 5px solid #e67e22;
+            border-right: 5px solid #e67e22;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 650px;
+            border-radius: 8px;
+            color: #627d98;
+        }
+
+        /* --- Списки --- */
+        ol, ul {
+            margin-bottom: 2rem;
+            text-align: left;
+            display: inline-block;
+            max-width: 650px;
+            background: #f8fafc;
+            padding: 1.5rem 2rem 1.5rem 3rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        ol li::marker { color: #27ae60; font-weight: bold; }
+        ul li::marker { color: #e67e22; }
+
+        /* --- Медиа и Медиафайлы --- */
+        img, iframe, audio {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 1.5rem auto;
+            display: block;
+        }
+
+        #places img {
+            display: inline-block;
+            width: 48%;
+            margin: 1rem 1%;
+            vertical-align: top;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        article img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 760px;
+            height: 415px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            width: 100%;
+            max-width: 550px;
+        }
+
+        /* --- Таблица --- */
+        table {
+            width: 100%;
+            max-width: 750px;
+            border-collapse: collapse;
+            margin: 2rem auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            border: none;
+        }
+
+        th, td {
+            padding: 1.1rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1.05rem;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.8px;
+        }
+
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) { background-color: #f8fafc; }
+        tr:hover { background-color: #ebf5fb; }
+
+        /* --- Боковая панель --- */
+        aside {
+            background: linear-gradient(135deg, #e3f2fd 0%, #c8e6c9 100%);
+            border: 1px solid #a5d6a7;
+            border-top: 5px solid #2ecc71;
+        }
+
+        aside h3 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+
+        /* --- Подвал --- */
+        footer {
+            background-color: #1a252f;
+            color: #ffffff;
+            padding: 2.5rem 1rem;
+            margin-top: 5rem;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            border-top: 4px solid #16a085;
+        }
+        /* --- АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ УСТРОЙСТВА (Экраны меньше 768px) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Уменьшаем отступы в шапке и размер заголовка */
+    header {
+        padding: 2.5rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem; /* Шрифт станет компактнее */
+        margin-bottom: 1.5rem;
+    }
+
+    /* 2. Перестраиваем меню в вертикальный список */
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    nav ul li a {
+        display: block; /* Кнопки растянутся на всю ширину для удобства нажатия пальцем */
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    /* 3. Уменьшаем внутренние отступы у карточек, чтобы освободить место для контента */
+    article, section, aside {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* 4. Разворачиваем картинки в секции #places на всю ширину (одна под другой) */
+    #places img {
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    /* 5. Делаем таблицы скроллируемыми, чтобы они не вылезали за экран */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* Появится аккуратная горизонтальная прокрутка только для таблицы */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    th, td {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* 6. Адаптируем видео (Iframe) */
+    iframe {
+        height: 250px; /* Уменьшаем высоту видео, чтобы оно не занимало весь экран */
+    }
+    
+    /* 7. Списки делаем более компактными */
+    ol, ul {
+        padding: 1.5rem 1rem 1.5rem 2rem;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Вітаємо у Берні &mdash; місті фонтанів, арок та ведмедів!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Про місто</a></li>
+                <li><a href="#places">Що відвідати</a></li>
+                <li><a href="#stats">Статистика та факти</a></li>
+                <li><a href="#media">Медіагалерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Стаття з описом та акцентами у тексті -->
+        <article id="about">
+            <h2>Серце Швейцарської Конфедерації</h2>
+            <p><strong>Берн</strong> &mdash; унікальне місто, яке є фактичною столицею Швейцарії. Засноване наприкінці дванадцятого століття на півострові, що омивається бірюзовою річкою Ааре, воно зуміло зберегти свій середньовічний шарм. Сьогодні Берн гармонійно поєднує статус політичного центру країни із неквапливим, спокійним ритмом життя.</p>
+            
+            <p>Прогулюючись старим містом, ви неодмінно звернете увагу на довгі кам'яні навіси. Протяжність цих <em>знаменитих торгових арок</em> становить близько шести кілометрів, що робить їх однією з найдовших критих купівельних зон у Європі. Вони дозволяють комфортно гуляти та купувати сувеніри навіть під час сильного дощу.</p>
+            
+            <p>Важливо знати, що <mark>все Старе місто Берна внесене до Списку всесвітньої спадщини ЮНЕСКО</mark>. Його старовинні вулочки, унікальні фонтани-свердловини XVI століття та велична архітектура з пісковика залишаються незмінними вже протягом багатьох століть.</p>
+            
+            <blockquote>
+                &laquo;Берн не намагається вразити хмарочосами, він підкорює мандрівників своєю гармонією з природою та повагою до власної історії.&raquo;
+            </blockquote>
+
+            <!-- Зображення 1 — Глобальне відкрите посилання -->
+            <img src="https://picsum.photos/id/1016/800/500" alt="Панорамний вид на Старе місто Берн та річку Ааре" width="800" height="500">
+        </article>
+
+        <hr>
+
+        <!-- Списки (Нумерований та Ненумерований) -->
+        <section id="places">
+            <h2>Найвизначніші місця, які варто відвідати</h2>
+            <p>Ми підготували послідовний маршрут для вашої ідеальної прогулянки столицею:</p>
+            
+            <ol>
+                <li>Цітглогге (Zytglogge) &mdash; середньовічна годинникова вежа з рухомими фігурками, що виступають щогодини.</li>
+                <li>Бернський собор (Мюнстер) &mdash; найвищий християнський храм Швейцарії з неймовірним панорамним майданчиком.</li>
+                <li>Ведмежа яма (Беренпарк) &mdash; великий парк на схилі річки, де живуть справжні symbols міста &mdash; бурі ведмеді.</li>
+                <li>Федеральний палац (Бундесгаус) &mdash; велична будівля парламенту, перед якою влітку б'ють 26 фонтанів.</li>
+            </ol>
+
+            <h3>Що обов'язково треба спробувати або купити в Берні:</h3>
+            <ul>
+                <li>Традиційне швейцарське сирне фондю або раклет.</li>
+                <li>Ароматні бернські медові пряники із зображенням ведмедика.</li>
+                <li>Справжній швейцарський шоколад відомих світових брендів &reg;.</li>
+            </ul>
+
+            <!-- Зображення 2 та 3 — Глобальні відкриті посилання -->
+            <img src="https://picsum.photos/id/1043/390/260" alt="Знаменита годинникова вежа Цітглогге у Берні" width="390" height="260">
+            <img src="https://picsum.photos/id/1029/390/260" alt="Федеральний палац Швейцарії в Берні" width="390" height="260">
+        </section>
+
+        <hr>
+
+        <!-- Таблиця з інформацією -->
+        <section id="stats">
+            <h2>Корисна інформація для туристів</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Параметр / Характеристика</th>
+                        <th>Значення для мандрівника</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Офіційна валюта</td>
+                        <td>Швейцарський франк (CHF), але в багатьох місцях приймають і євро &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>Мова спілкування</td>
+                        <td>Німецька (бернський діалект), проте персонал усюди чудово володіє англійською</td>
+                    </tr>
+                    <tr>
+                        <td>Головна особливість</td>
+                        <td>Понад 100 історичних фонтанів, з яких тече чиста питна джерельна вода</td>
+                    </tr>
+                    <tr>
+                        <td>Міський транспорт</td>
+                        <td>Трамваї та автобуси (туристам у готелях видають безкоштовний Bern Ticket)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Медіаконтент та Iframe -->
+        <section id="media">
+            <h2>Медіагалерея швейцарської столиці</h2>
+            
+            <h3>Відеоекскурсія Берном:</h3>
+            <!-- Офіційне YouTube відео про Берн, повністю сумісне з локальним запуском -->
+            <iframe width="760" height="415" 
+                src="https://www.youtube.com/embed/7j6gWd2gWHM" 
+                title="Берн, Швейцарія — Туристичне відео" 
+                style="border: 0;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+
+            <h3>Аудіоатмосфера (Музичний трек):</h3>
+            <p>Прослухайте приємну мелодію під час ознайомлення з матеріалом:</p>
+            <!-- Використано пряме MP3 посилання з іншого стабільного CDN джерела, щоб уникнути проблем із локальним програванням .ogg -->
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Ваш browser не підтримує аудіо-елемент.
+            </audio>
+
+            <h3>Берн на карті Google Maps:</h3>
+            <!-- Автономна інтерактивна карта Берна -->
+            <iframe 
+                src="https://maps.google.com/maps?q=Bern,Switzerland&t=m&z=12&output=embed&iwloc=near"  
+                width="500" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>S
+        </section>
+
+        <!-- Бічна панель із додатковою інформацією -->
+        <aside>
+            <h3>Порада для економії</h3>
+            <p>Не купуйте питну воду в пляшках! Вода у всіх фонтанах Берна (якщо на них немає спеціального попереджувального знака) є абсолютно чистою, прохолодною та придатною для пиття. Просто беріть із собою багаторазову пляшечку.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Закотей Ілля. Всі права захищено &reg;.</p>
+    </footer>
+
+</body>
+</html>
